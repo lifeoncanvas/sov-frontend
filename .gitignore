@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.log
+
+# Local environment (copy .env.example to .env)
+.env
+.env.*
+!.env.example
+
+.DS_Store
+.idea/
+.vscode/
