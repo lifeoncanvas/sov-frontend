@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import PageHero from '../components/PageHero';
 import { Img, Ornament, Reveal, Seo } from '../components/ui';
+import { siteImage } from '../lib/siteImages';
 
 const VALUES = [
   ['Intention', 'Every piece is chosen for the moment it will hold, not to fill a shelf.'],
@@ -14,12 +15,12 @@ export default function About() {
   const a = content.about || {};
   return (
     <>
-      <Seo title="About Us" description={a.body?.slice(0, 155)} image={a.image} />
-      <PageHero eyebrow="Our Story" title={a.heading || "More Than a Gift. It's a Memory."} text={a.body} image={a.image} imageAlt="A wrapped LICHT gift" />
+      <Seo title="About Us" description={a.body?.slice(0, 155)} image={siteImage('about')} />
+      <PageHero eyebrow="Our Story" title={a.heading || "More Than a Gift. It's a Memory."} text={a.body} image={siteImage('about')} imageAlt="A wrapped LICHT gift" />
       <section className="container-site grid items-center gap-12 py-24 lg:grid-cols-2 lg:py-32">
         <Reveal className="grid grid-cols-2 gap-4">
-          <Img src={a.image2} alt="Hand-thrown cups" className="aspect-[3/4]" />
-          <Img src={a.image3} alt="Candlelight" className="mt-16 aspect-[3/4]" />
+          <Img src={siteImage('about-2')} alt="Hand-thrown cups" className="aspect-[3/4]" />
+          <Img src={siteImage('about-3')} alt="Candlelight" className="mt-16 aspect-[3/4]" />
         </Reveal>
         <Reveal>
           <span className="eyebrow">Every Moment Deserves a Signature</span>

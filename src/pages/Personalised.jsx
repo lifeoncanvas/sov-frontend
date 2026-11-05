@@ -6,6 +6,7 @@ import PageHero from '../components/PageHero';
 import ProductCard from '../components/ProductCard';
 import EnquiryForm from '../components/EnquiryForm';
 import { Reveal, SectionHeading, Seo, Spinner } from '../components/ui';
+import { siteImage } from '../lib/siteImages';
 
 export default function Personalised() {
   const { content } = useApp();
@@ -14,8 +15,8 @@ export default function Personalised() {
   useEffect(() => { api('/api/products?personalisable=true&sort=popular&size=8').then((r) => setProducts(r.content)).catch(() => setProducts([])); }, []);
   return (
     <>
-      <Seo title="Personalised Gifts" description="Personalise souvenirs with names, dates, initials, messages, logos and event details." image={d.image} />
-      <PageHero eyebrow="Personalised Gifting" title={d.heading || 'Make It Personal.'} text={d.body} image={d.image} imageAlt="Personalised stationery">
+      <Seo title="Personalised Gifts" description="Personalise souvenirs with names, dates, initials, messages, logos and event details." image={siteImage('personalised')} />
+      <PageHero eyebrow="Personalised Gifting" title={d.heading || 'Make It Personal.'} text={d.body} image={siteImage('personalised')} imageAlt="Personalised stationery">
         <ul className="mt-8 flex flex-wrap gap-2">
           {(d.options || []).map((o) => <li key={o} className="border border-espresso/15 bg-ivory/70 px-4 py-2 font-display text-lg italic">{o}</li>)}
         </ul>

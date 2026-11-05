@@ -7,6 +7,7 @@ import ProductCard from '../components/ProductCard';
 import { NewsletterForm } from '../components/Footer';
 import { getCategoryFallback, resolveCategoryImage } from '../lib/images';
 import { Img, Ornament, Reveal, SectionHeading, Seo, Spinner, Stars } from '../components/ui';
+import { giftBoxImage, instagramImages, occasionImage, siteImage } from '../lib/siteImages';
 
 export default function Home() {
   const { content } = useApp();
@@ -37,7 +38,7 @@ function Hero({ hero }) {
   const h = hero || {};
   return (
     <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-ink text-ivory">
-      {h.image && <img src={h.image} alt={h.imageAlt || ''} className="absolute inset-0 h-full w-full animate-slowZoom object-cover opacity-75" fetchpriority="high" />}
+      <img src={siteImage('hero')} alt={h.imageAlt || ''} className="absolute inset-0 h-full w-full animate-slowZoom object-cover opacity-75" fetchpriority="high" />
       <div className="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/30 to-ink/75" />
       {/* soft dark pool behind the copy so it reads over busy photography */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_55%_at_50%_52%,rgba(21,17,14,0.72)_0%,rgba(21,17,14,0.45)_55%,rgba(21,17,14,0)_100%)]" />
@@ -84,9 +85,7 @@ function FeaturedCollections() {
           {cats.slice(0, 5).map((c, i) => {
             const layout = ['md:col-span-3 md:row-span-2', 'md:col-span-3', 'md:col-span-1 md:col-start-4', 'md:col-span-2', 'md:col-span-6 md:h-[300px]'][i] || '';
             const fallback = getCategoryFallback(c.slug);
-            const imageSrc = c.slug === 'gift-boxes'
-              ? 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=2000&q=85'
-              : resolveCategoryImage(c.imageUrl, c.slug);
+            const imageSrc = resolveCategoryImage(c.imageUrl, c.slug);
             return (
               <Reveal key={c.id} delay={i * 90} className={`${layout} ${i === 0 ? 'col-span-2' : ''} ${i === 4 ? 'md:row-start-3' : ''}`}>
                 <Link to={`/shop/${c.slug}`} className={`group relative block overflow-hidden md:h-full ${i === 0 ? 'h-[440px]' : 'h-[280px]'}`}>
@@ -144,14 +143,14 @@ function AboutBrand({ about }) {
           <p className="font-display text-[3.3rem] leading-[0.95] text-gold-deep sm:text-7xl lg:text-[6.5rem]">More</p>
         </Reveal>
         <Reveal delay={120} className="lg:col-span-4 lg:col-start-6 lg:row-span-2 lg:row-start-1">
-          <Img src={a.image} alt="A gift tied with ribbon" className="aspect-[4/5] w-full" />
+          <Img src={siteImage('about')} alt="A gift tied with ribbon" className="aspect-[4/5] w-full" />
           <p className="mt-2 text-[10px] uppercase tracking-wide2 text-espresso-muted">Hand-tied, every time</p>
         </Reveal>
         <Reveal delay={60} className="lg:col-span-4 lg:col-start-9 lg:row-start-2 lg:mt-16 lg:self-start">
           <p className="text-right font-display text-[3.3rem] italic leading-[0.95] text-gold-deep sm:text-7xl lg:text-[6.5rem]">than a gift.</p>
         </Reveal>
         <Reveal delay={160} className="hidden lg:col-span-3 lg:col-start-1 lg:row-start-2 lg:mt-24 lg:block">
-          <Img src={a.image2} alt="Hand-thrown ceramic cups" className="aspect-square w-full" />
+          <Img src={siteImage('about-2')} alt="Hand-thrown ceramic cups" className="aspect-square w-full" />
         </Reveal>
         <Reveal className="lg:col-span-5 lg:col-start-4 lg:row-start-3 lg:mt-16">
           <h2 className="display-md">{a.heading || "More Than a Gift. It's a Memory."}</h2>
@@ -159,7 +158,7 @@ function AboutBrand({ about }) {
           <Link to="/about" className="btn-outline mt-9">Explore Our Story</Link>
         </Reveal>
         <Reveal delay={200} className="hidden lg:col-span-3 lg:col-start-10 lg:row-start-3 lg:mt-36 lg:block">
-          <Img src={a.image3} alt="A lit candle" className="aspect-[3/4] w-full" />
+          <Img src={siteImage('about-3')} alt="A lit candle" className="aspect-[3/4] w-full" />
         </Reveal>
       </div>
     </section>
@@ -208,7 +207,7 @@ function Occasions({ data }) {
       <div className="scrollbar-none mt-14 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 sm:px-8 lg:px-12">
         {items.map((o, i) => (
           <Link key={o.slug} to={`/shop/${o.category}`} className="group relative w-[72vw] max-w-[320px] shrink-0 snap-start sm:w-[300px]">
-            <Img src={o.image} alt={o.title} className="aspect-[3/4]" imgClassName="transition-transform duration-[1600ms] ease-silk group-hover:scale-105" />
+            <Img src={occasionImage(o.slug)} alt={o.title} className="aspect-[3/4]" imgClassName="transition-transform duration-[1600ms] ease-silk group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/70 to-transparent opacity-90" />
             <div className="absolute inset-x-0 bottom-0 p-6 text-ivory">
               <span className="text-[10px] tracking-luxe text-gold-soft">{String(i + 1).padStart(2, '0')}</span>
@@ -227,7 +226,7 @@ function Personalised({ data }) {
   return (
     <section className="bg-champagne/50">
       <div className="grid lg:grid-cols-2">
-        <Img src={d.image} alt="Personalised stationery" className="min-h-[420px] lg:min-h-[640px]" />
+        <Img src={siteImage('personalised')} alt="Personalised stationery" className="min-h-[420px] lg:min-h-[640px]" />
         <div className="flex items-center px-5 py-20 sm:px-12 lg:px-20">
           <Reveal className="max-w-lg">
             <span className="eyebrow">Personalised Gifting</span>
@@ -251,7 +250,7 @@ function CorporateBand({ data }) {
   const d = data || {};
   return (
     <section className="relative overflow-hidden bg-ink py-24 text-ivory lg:py-36">
-      {d.image && <img src={d.image} alt="" aria-hidden="true" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-30" />}
+      <img src={siteImage('corporate')} alt="" aria-hidden="true" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-30" />
       <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/30" />
       <div className="container-site relative">
         <Reveal className="max-w-xl">
@@ -283,7 +282,7 @@ function GiftBoxes({ data }) {
         {items.map((b, i) => (
           <Reveal key={b.title} delay={i * 80} className={i === 4 ? 'col-span-2 lg:col-span-1' : ''}>
             <Link to={b.link || '/gift-boxes'} className="group block">
-              <Img src={b.image} alt={b.title} className={`${i === 4 ? 'aspect-[2/1] lg:aspect-[3/4]' : 'aspect-[3/4]'}`} imgClassName="transition-transform duration-[1400ms] ease-silk group-hover:scale-105" />
+              <Img src={giftBoxImage(b.title)} alt={b.title} className={`${i === 4 ? 'aspect-[2/1] lg:aspect-[3/4]' : 'aspect-[3/4]'}`} imgClassName="transition-transform duration-[1400ms] ease-silk group-hover:scale-105" />
               <h3 className="mt-4 font-display text-xl">{b.title}</h3>
               <p className="mt-1 text-[13px] text-espresso-muted">{b.description}</p>
             </Link>
@@ -384,7 +383,7 @@ function Testimonials() {
 /* M — Instagram grid. */
 function InstagramGrid({ data }) {
   const d = data || {};
-  const images = d.images || [];
+  const images = instagramImages();
   if (!images.length) return null;
   return (
     <section className="py-24 lg:py-28">

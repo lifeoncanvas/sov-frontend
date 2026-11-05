@@ -5,6 +5,7 @@ import PageHero from '../components/PageHero';
 import ProductCard from '../components/ProductCard';
 import EnquiryForm from '../components/EnquiryForm';
 import { Reveal, SectionHeading, Seo } from '../components/ui';
+import { siteImage } from '../lib/siteImages';
 
 export default function Corporate() {
   const { content } = useApp();
@@ -13,8 +14,8 @@ export default function Corporate() {
   useEffect(() => { api('/api/products?category=corporate-gifts&size=4&sort=popular').then((r) => setProducts(r.content)).catch(() => {}); }, []);
   return (
     <>
-      <Seo title="Corporate Gifts" description={d.body?.slice(0, 155)} image={d.image} />
-      <PageHero eyebrow="Corporate Gifting" title={d.heading || 'Corporate Gifting, With a Signature Touch.'} text={d.body} image={d.image} imageAlt="A business meeting">
+      <Seo title="Corporate Gifts" description={d.body?.slice(0, 155)} image={siteImage('corporate')} />
+      <PageHero eyebrow="Corporate Gifting" title={d.heading || 'Corporate Gifting, With a Signature Touch.'} text={d.body} image={siteImage('corporate')} imageAlt="A business meeting">
         <ul className="mt-8 space-y-3">
           {(d.points || []).map((p) => <li key={p} className="flex items-center gap-3 text-sm"><span className="h-px w-6 bg-gold" />{p}</li>)}
         </ul>

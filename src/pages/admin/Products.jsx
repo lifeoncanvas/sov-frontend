@@ -5,6 +5,7 @@ import { useApp } from '../../context/AppContext';
 import { api, qs } from '../../lib/api';
 import { money } from '../../lib/format';
 import { Field, Notice, Spinner } from '../../components/ui';
+import { productImage } from '../../lib/images';
 import { AdminTitle, Pager, Panel, Table } from './Admin';
 
 export default function Products() {
@@ -38,7 +39,7 @@ function ProductList() {
           <Table head={['', 'Product', 'Price', 'Stock', 'Flags', '']} empty={data.content.length === 0 && 'No products found.'}>
             {data.content.map((p) => (
               <tr key={p.id} className="hover:bg-champagne/30">
-                <td className="w-16 px-4 py-2">{p.imageUrl && <img src={p.imageUrl} alt="" className="h-14 w-11 object-cover" />}</td>
+                <td className="w-16 px-4 py-2">{<img src={productImage(p.slug)} alt="" className="h-14 w-11 object-cover" />}</td>
                 <td className="px-4 py-2"><Link to={`/admin/products/${p.id}`} className="font-medium hover:underline">{p.name}</Link><p className="text-xs text-espresso-muted">{p.categorySlugs.join(', ')}</p></td>
                 <td className="px-4 py-2 tabular-nums">{money(p.price)}</td>
                 <td className={`px-4 py-2 tabular-nums ${p.stock <= 5 ? 'text-red-800' : ''}`}>{p.stock}</td>

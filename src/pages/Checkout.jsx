@@ -9,6 +9,7 @@ import Captcha, { captchaEnabled } from '../components/Captcha';
 import { PersonalisationList } from '../components/CartDrawer';
 import { CouponBox, Totals } from './Cart';
 import { EmptyState, Field, Img, Notice, PageLoader, Seo, Spinner } from '../components/ui';
+import { productImage } from '../lib/images';
 
 const SHIPPING = [
   ['STANDARD', 'Standard delivery', '3–5 working days after production'],
@@ -300,7 +301,7 @@ export default function Checkout() {
               {cart.items.map((i) => (
                 <li key={i.id} className="flex gap-4">
                   <div className="relative shrink-0">
-                    <Img src={i.imageUrl} alt={i.name} className="h-20 w-16" />
+                    <Img src={productImage(i.slug || i.name)} alt={i.name} className="h-20 w-16" />
                     <span className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-espresso px-1 text-[10px] text-ivory">{i.quantity}</span>
                   </div>
                   <div className="min-w-0 flex-1">

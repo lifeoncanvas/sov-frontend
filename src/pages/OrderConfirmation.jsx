@@ -5,6 +5,7 @@ import { api } from '../lib/api';
 import { money, titleCase } from '../lib/format';
 import { PersonalisationList } from '../components/CartDrawer';
 import { Img, Ornament, PageLoader, Seo } from '../components/ui';
+import { productImage } from '../lib/images';
 
 export function OrderSummary({ order }) {
   const a = order.shippingAddress;
@@ -19,7 +20,7 @@ export function OrderSummary({ order }) {
       <ul className="divide-y divide-espresso/10 px-6">
         {order.items.map((i, n) => (
           <li key={n} className="flex gap-4 py-5">
-            <Img src={i.imageUrl} alt={i.productName} className="h-20 w-16 shrink-0" />
+            <Img src={productImage(i.productName)} alt={i.productName} className="h-20 w-16 shrink-0" />
             <div className="min-w-0 flex-1">
               <div className="flex justify-between gap-3"><span className="font-display text-lg">{i.productName}</span><span className="tabular-nums">{money(i.lineTotal)}</span></div>
               <p className="text-xs text-espresso-muted">{i.quantity} × {money(i.unitPrice)}</p>

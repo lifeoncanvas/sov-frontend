@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
+import { DEFAULT_IMAGE } from '../lib/images';
 
 const SITE = 'LICHT Signature Souvenirs';
 
@@ -35,7 +36,7 @@ export function Seo({ title, description, image, type = 'website', jsonLd, noind
 }
 
 /** Lazy image with a soft fade-in, warm placeholder tone, and frontend fallback. */
-export function Img({ src, alt = '', className = '', imgClassName = '', eager = false, sizes, fallback = '/images/products/default.svg' }) {
+export function Img({ src, alt = '', className = '', imgClassName = '', eager = false, sizes, fallback = DEFAULT_IMAGE }) {
   const [imgSrc, setImgSrc] = useState(src || fallback);
   const [loaded, setLoaded] = useState(false);
 
@@ -47,8 +48,8 @@ export function Img({ src, alt = '', className = '', imgClassName = '', eager = 
   const handleError = () => {
     if (fallback && imgSrc !== fallback) {
       setImgSrc(fallback);
-    } else if (imgSrc !== '/images/products/default.svg') {
-      setImgSrc('/images/products/default.svg');
+    } else if (imgSrc !== DEFAULT_IMAGE) {
+      setImgSrc(DEFAULT_IMAGE);
     }
   };
 

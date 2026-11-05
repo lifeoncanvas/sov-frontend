@@ -4,6 +4,7 @@ import { useApp } from '../../context/AppContext';
 import { api } from '../../lib/api';
 import { date, money } from '../../lib/format';
 import { Field, Notice, Spinner } from '../../components/ui';
+import { categoryImage } from '../../lib/images';
 import { AdminTitle, Panel, StatusPill, Table } from './Admin';
 
 /* ---------------- Site content (CMS) ---------------- */
@@ -257,7 +258,7 @@ export function Categories() {
         <Table head={['', 'Name', 'Slug', 'Order', 'Homepage', '']}>
           {items.map((c) => (
             <tr key={c.id}>
-              <td className="w-16 px-4 py-2">{c.imageUrl && <img src={c.imageUrl} alt="" className="h-12 w-12 object-cover" />}</td>
+              <td className="w-16 px-4 py-2">{<img src={categoryImage(c.slug)} alt="" className="h-12 w-12 object-cover" />}</td>
               <td className="px-4 py-2 font-medium">{c.name}</td><td className="px-4 py-2 text-espresso-muted">{c.slug}</td><td className="px-4 py-2">{c.sortOrder}</td><td className="px-4 py-2">{c.featured ? 'Yes' : '—'}</td>
               <td className="px-4 py-2 text-right text-xs"><button onClick={() => setEditing({ ...c })} className="underline">Edit</button><button onClick={() => remove(c)} className="ml-3 text-red-900 underline">Delete</button></td>
             </tr>

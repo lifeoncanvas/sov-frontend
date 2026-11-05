@@ -5,6 +5,7 @@ import { api, qs } from '../../lib/api';
 import { date, money, titleCase } from '../../lib/format';
 import { PersonalisationList } from '../../components/CartDrawer';
 import { Field, Notice, Spinner } from '../../components/ui';
+import { productImage } from '../../lib/images';
 import { AdminTitle, Pager, Panel, StatusPill, Table } from './Admin';
 
 const ORDER_STATUSES = ['PENDING', 'CONFIRMED', 'IN_PRODUCTION', 'SHIPPED', 'DELIVERED', 'CANCELLED'];
@@ -114,7 +115,7 @@ function OrderDetail() {
             <ul className="divide-y divide-espresso/5">
               {o.items.map((i, n) => (
                 <li key={n} className="flex gap-4 p-5">
-                  {i.imageUrl && <img src={i.imageUrl} alt="" className="h-20 w-16 object-cover" />}
+                  {<img src={productImage(i.productName)} alt="" className="h-20 w-16 object-cover" />}
                   <div className="flex-1">
                     <div className="flex justify-between gap-3 text-sm"><span className="font-medium">{i.productName}</span><span className="tabular-nums">{i.quantity} × {money(i.unitPrice)} = {money(i.lineTotal)}</span></div>
                     {i.personalisation

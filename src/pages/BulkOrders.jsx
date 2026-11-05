@@ -2,14 +2,15 @@ import { useApp } from '../context/AppContext';
 import PageHero from '../components/PageHero';
 import EnquiryForm from '../components/EnquiryForm';
 import { Reveal, Seo } from '../components/ui';
+import { siteImage } from '../lib/siteImages';
 
 export default function BulkOrders() {
   const { content } = useApp();
   const d = content.bulk || {};
   return (
     <>
-      <Seo title="Bulk & Event Orders" description={d.body?.slice(0, 155)} image={d.image} />
-      <PageHero eyebrow="Bulk & Event Orders" title={d.heading || 'Planning an Event? Let Us Help.'} text={d.body} image={d.image} imageAlt="An elegant event table">
+      <Seo title="Bulk & Event Orders" description={d.body?.slice(0, 155)} image={siteImage('bulk')} />
+      <PageHero eyebrow="Bulk & Event Orders" title={d.heading || 'Planning an Event? Let Us Help.'} text={d.body} image={siteImage('bulk')} imageAlt="An elegant event table">
         <a href="#quote" className="btn-dark mt-10">Request a Quote</a>
       </PageHero>
       <section className="container-site py-20">

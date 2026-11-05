@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const prodDir = path.resolve('c:/Users/Sharon/souvneirs/souvenirs/frontend/public/images/products');
-const catDir = path.resolve('c:/Users/Sharon/souvneirs/souvenirs/frontend/public/images/categories');
+const prodDir = path.join(__dirname, 'src/assets/products');
+const catDir = path.join(__dirname, 'src/assets/categories');
 
 fs.mkdirSync(prodDir, { recursive: true });
 fs.mkdirSync(catDir, { recursive: true });
@@ -305,5 +305,5 @@ categories.forEach(c => {
   fs.writeFileSync(path.join(catDir, `${c.slug}.svg`), content, 'utf8');
 });
 
-console.log('Successfully generated all product and category SVG images in frontend/public/images/');
+console.log('Successfully generated all product and category SVG images in frontend/src/assets/');
 

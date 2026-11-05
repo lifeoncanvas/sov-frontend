@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import PageHero from '../components/PageHero';
 import { Img, Reveal, Seo } from '../components/ui';
+import { occasionImage } from '../lib/siteImages';
 
 export default function Occasions() {
   const { content } = useApp();
@@ -15,7 +16,7 @@ export default function Occasions() {
         {items.map((o, i) => (
           <Reveal key={o.slug} delay={(i % 3) * 90}>
             <Link to={`/shop/${o.category}`} className="group block">
-              <Img src={o.image} alt={o.title} className="aspect-[4/5]" imgClassName="transition-transform duration-[1400ms] ease-silk group-hover:scale-105" />
+              <Img src={occasionImage(o.slug)} alt={o.title} className="aspect-[4/5]" imgClassName="transition-transform duration-[1400ms] ease-silk group-hover:scale-105" />
               <span className="mt-5 block text-[10px] tracking-luxe text-gold-deep">{String(i + 1).padStart(2, '0')}</span>
               <h2 className="mt-1 font-display text-3xl">{o.title}</h2>
               <span className="link-underline mt-4">Explore gifts <ArrowRight size={13} /></span>

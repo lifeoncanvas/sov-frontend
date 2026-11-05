@@ -7,6 +7,7 @@ import ProductCard from '../../components/ProductCard';
 import { OrderSummary } from '../OrderConfirmation';
 import { OrderProgress } from '../TrackOrder';
 import { EmptyState, ErrorState, Field, Img, Notice, PageLoader, Seo, Spinner } from '../../components/ui';
+import { productImage } from '../../lib/images';
 
 const TABS = [['', 'Overview'], ['orders', 'Orders'], ['wishlist', 'Wishlist'], ['addresses', 'Addresses'], ['profile', 'Profile & security']];
 
@@ -85,9 +86,9 @@ function Overview() {
                 <p className="font-display text-2xl">{latest.orderNumber}</p>
                 <p className="mt-1 text-sm text-espresso-muted">{date(latest.createdAt)} · {money(latest.total)} · {titleCase(latest.status)}</p>
               </div>
-              {latest.items?.[0]?.imageUrl && (
+              {latest.items?.[0] && (
                 <div className="h-16 w-14 shrink-0 overflow-hidden border border-espresso/10 bg-ivory">
-                  <Img src={latest.items[0].imageUrl} alt={latest.items[0].productName} className="h-full w-full" imgClassName="object-cover" />
+                  <Img src={productImage(latest.items[0].productName)} alt={latest.items[0].productName} className="h-full w-full" imgClassName="object-cover" />
                 </div>
               )}
             </div>
@@ -95,7 +96,7 @@ function Overview() {
               <div className="mt-3 flex gap-2">
                 {latest.items.slice(1, 4).map((item, i) => (
                   <div key={i} className="h-12 w-10 shrink-0 overflow-hidden border border-espresso/10 bg-ivory">
-                    <Img src={item.imageUrl} alt={item.productName} className="h-full w-full" imgClassName="object-cover" />
+                    <Img src={productImage(item.productName)} alt={item.productName} className="h-full w-full" imgClassName="object-cover" />
                   </div>
                 ))}
                 {latest.items.length > 4 && (
@@ -129,9 +130,9 @@ function Orders() {
       {data.map((o) => (
         <li key={o.id}>
           <Link to={`/account/orders/${o.orderNumber}`} className="grid gap-3 py-5 text-sm transition hover:bg-champagne/30 sm:grid-cols-[auto_1fr_1fr_1fr_auto] sm:items-center sm:px-3">
-            {o.items?.[0]?.imageUrl ? (
+            {o.items?.[0] ? (
               <div className="h-12 w-10 shrink-0 overflow-hidden border border-espresso/15 bg-ivory">
-                <Img src={o.items[0].imageUrl} alt={o.items[0].productName} className="h-full w-full" imgClassName="object-cover" />
+                <Img src={productImage(o.items[0].productName)} alt={o.items[0].productName} className="h-full w-full" imgClassName="object-cover" />
               </div>
             ) : <div className="h-12 w-10 shrink-0 border border-espresso/10 bg-champagne/20" />}
             <span className="font-display text-lg">{o.orderNumber}</span>

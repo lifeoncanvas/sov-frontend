@@ -4,7 +4,7 @@ import { Heart, Truck, Gift, Upload, ShieldCheck } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { api } from '../lib/api';
 import { money, date as fmtDate } from '../lib/format';
-import { getProductFallback, resolveProductImage } from '../lib/images';
+import { getProductFallback, productImage, productImages, resolveProductImage } from '../lib/images';
 import ProductCard from '../components/ProductCard';
 import { QtyStepper } from '../components/CartDrawer';
 import { ErrorState, Field, Img, Notice, PageLoader, Seo, Spinner, Stars } from '../components/ui';
@@ -31,14 +31,14 @@ export default function Product() {
 
   const jsonLd = {
     '@context': 'https://schema.org', '@type': 'Product', name: p.name, description: p.shortDescription,
-    image: p.images.map((i) => i.url),
+    image: productImages(p.slug).map((u) => new URL(u, window.location.origin).href),
     offers: { '@type': 'Offer', price: p.price, availability: p.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' },
     ...(p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.averageRating, reviewCount: p.reviewCount } } : {}),
   };
 
   return (
     <>
-      <Seo title={p.name} description={p.shortDescription} image={p.images[0]?.url} type="product" jsonLd={jsonLd} />
+      <Seo title={p.name} description={p.shortDescription} image={productImage(p.slug)} type="product" jsonLd={jsonLd} />
       <div className="container-site pt-8">
         <nav className="text-[10.5px] uppercase tracking-wide2 text-espresso-muted" aria-label="Breadcrumb">
           <Link to="/" className="hover:text-espresso">Home</Link><span className="mx-2">/</span>
@@ -73,7 +73,8 @@ export default function Product() {
 function Gallery({ images, name, slug }) {
   const [active, setActive] = useState(0);
   const fallback = getProductFallback(slug);
-  const list = images.length ? images : [{ url: null, altText: name }];
+  // Pictures come from the frontend's own files (src/assets/products), not from the database.
+  const list = productImages(slug).map((url, i) => ({ url, altText: images[i]?.altText || name }));
   return (
     <div className="grid gap-3 sm:grid-cols-[72px_1fr]">
       <div className="order-2 flex gap-2 sm:order-1 sm:flex-col">
