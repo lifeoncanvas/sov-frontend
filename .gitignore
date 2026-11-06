@@ -6,6 +6,8 @@ dist/
 .env
 .env.*
 !.env.example
+# Production build settings: public values only (the API address), so it is committed.
+!.env.production
 
 .DS_Store
 .idea/

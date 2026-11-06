@@ -38,12 +38,20 @@ export function Seo({ title, description, image, type = 'website', jsonLd, noind
 /** Lazy image with a soft fade-in, warm placeholder tone, and frontend fallback. */
 export function Img({ src, alt = '', className = '', imgClassName = '', eager = false, sizes, fallback = DEFAULT_IMAGE }) {
   const [imgSrc, setImgSrc] = useState(src || fallback);
-  const [loaded, setLoaded] = useState(false);
+  // Remember which picture finished loading rather than a plain flag, so a load that fires before this
+  // component's effects run (cached or bundled images) is never undone and the picture cannot stay hidden.
+  const [loadedSrc, setLoadedSrc] = useState(null);
+  const ref = useRef(null);
+  const loaded = loadedSrc === imgSrc;
 
   useEffect(() => {
     setImgSrc(src || fallback);
-    setLoaded(false);
   }, [src, fallback]);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (el && el.complete && el.naturalWidth > 0) setLoadedSrc(imgSrc);
+  }, [imgSrc]);
 
   const handleError = () => {
     if (fallback && imgSrc !== fallback) {
@@ -57,12 +65,13 @@ export function Img({ src, alt = '', className = '', imgClassName = '', eager = 
     <div className={`relative overflow-hidden bg-champagne ${className}`}>
       {imgSrc && (
         <img
+          ref={ref}
           src={imgSrc}
           alt={alt}
           sizes={sizes}
           loading={eager ? 'eager' : 'lazy'}
           decoding="async"
-          onLoad={() => setLoaded(true)}
+          onLoad={() => setLoadedSrc(imgSrc)}
           onError={handleError}
           className={`h-full w-full object-cover transition-opacity duration-700 ${loaded ? 'opacity-100' : 'opacity-0'} ${imgClassName}`}
         />

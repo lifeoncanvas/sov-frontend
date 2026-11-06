@@ -4,7 +4,7 @@ import { Heart, Truck, Gift, Upload, ShieldCheck } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { api } from '../lib/api';
 import { money, date as fmtDate } from '../lib/format';
-import { getProductFallback, productImage, productImages, resolveProductImage } from '../lib/images';
+import { getProductFallback, productImage, productImages } from '../lib/images';
 import ProductCard from '../components/ProductCard';
 import { QtyStepper } from '../components/CartDrawer';
 import { ErrorState, Field, Img, Notice, PageLoader, Seo, Spinner, Stars } from '../components/ui';
@@ -81,12 +81,12 @@ function Gallery({ images, name, slug }) {
         {list.length > 1 && list.map((img, i) => (
           <button key={(img.url || slug) + i} onClick={() => setActive(i)} aria-label={`View image ${i + 1}`}
             className={`w-16 border transition sm:w-full ${i === active ? 'border-espresso' : 'border-transparent opacity-60 hover:opacity-100'}`}>
-            <Img src={resolveProductImage(img.url, slug)} fallback={fallback} alt="" className="aspect-[4/5]" />
+            <Img src={img.url} fallback={fallback} alt="" eager className="aspect-[4/5]" />
           </button>
         ))}
       </div>
       <div className="order-1 sm:order-2">
-        <Img key={active} src={resolveProductImage(list[active].url, slug)} fallback={fallback} alt={list[active].altText || name} eager className="aspect-[4/5] animate-fadeIn" />
+        <Img key={active} src={list[active].url} fallback={fallback} alt={list[active].altText || name} eager className="aspect-[4/5] animate-fadeIn" />
       </div>
     </div>
   );

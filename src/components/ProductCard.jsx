@@ -4,7 +4,7 @@ import { Eye, Heart, X } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { api } from '../lib/api';
 import { money } from '../lib/format';
-import { getProductFallback, productImages, resolveProductImage } from '../lib/images';
+import { getProductFallback, resolveProductImage } from '../lib/images';
 import { Img, Spinner } from './ui';
 
 export default function ProductCard({ product, eager }) {
@@ -21,7 +21,6 @@ export default function ProductCard({ product, eager }) {
 
   const imgSrc = resolveProductImage(product.imageUrl, product.slug);
   const fallback = getProductFallback(product.slug);
-  const hoverSrc = productImages(product.slug)[1];
 
   return (
     <article className="group flex flex-col">
@@ -29,10 +28,6 @@ export default function ProductCard({ product, eager }) {
         <Link to={`/product/${product.slug}`} className="block" aria-label={product.name}>
           <Img src={imgSrc} alt={product.imageAlt} fallback={fallback} eager={eager} className="aspect-[4/5]"
             imgClassName="transition-transform duration-[1400ms] ease-silk group-hover:scale-[1.04]" />
-          {hoverSrc && (
-            <img src={hoverSrc} alt="" loading="lazy" aria-hidden="true"
-              className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
-          )}
         </Link>
         <div className="pointer-events-none absolute left-3 top-3 flex flex-col gap-1.5">
           {!product.inStock && <span className="bg-ivory/90 px-2.5 py-1 text-[9.5px] uppercase tracking-wide2">Sold out</span>}

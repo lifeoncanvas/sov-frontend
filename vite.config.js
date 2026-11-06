@@ -1,7 +1,26 @@
-import { defineConfig, loadEnv } from 'vite';
+import { createLogger, defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 
 const API = process.env.VITE_API_TARGET || 'http://localhost:8090';
+
+/**
+ * When the backend is not running, Vite prints a stack trace for every /api request. Replace that with one
+ * clear hint, repeated at most every 15 seconds while the backend stays down.
+ */
+const logger = createLogger();
+const logError = logger.error;
+let lastHint = 0;
+logger.error = (msg, opts) => {
+  if (typeof msg === 'string' && msg.includes('http proxy error') && msg.includes('ECONNREFUSED')) {
+    if (Date.now() - lastHint > 15000) {
+      lastHint = Date.now();
+      logger.warn(`Backend not reachable at ${API}, so products cannot load. Start the backend in another `
+        + 'terminal: ./mvnw spring-boot:run (Windows: .\\mvnw.cmd spring-boot:run)', { timestamp: true });
+    }
+    return;
+  }
+  logError(msg, opts);
+};
 
 /**
  * Content-Security-Policy for production builds, injected as a <meta> tag so it works on any static host.
@@ -37,6 +56,7 @@ function contentSecurityPolicy(env) {
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), 'VITE_');
   return {
+    customLogger: logger,
     plugins: [react(), contentSecurityPolicy(env)],
     server: {
       port: 5173,

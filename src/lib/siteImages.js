@@ -16,12 +16,10 @@ const keepsakeBox = productImages('the-signature-keepsake-box');
 
 const DEFAULTS = {
   hero: keepsakeBox[0],
-  about: keepsakeBox[1],
   'about-2': productImage('hand-thrown-keepsake-cups'),
   'about-3': productImage('personalised-soy-candle'),
   'occasion-weddings': categoryImage('wedding-souvenirs'),
   'occasion-birthdays': categoryImage('birthday-gifts'),
-  'occasion-anniversaries': productImages('monogrammed-ring-dish')[1],
   'occasion-christenings': productImage('pressed-bloom-keepsake-frame'),
   'occasion-graduations': productImage('linen-notebook-pen-set'),
   'gift-box-the-signature-box': keepsakeBox[0],
@@ -32,7 +30,6 @@ const DEFAULTS = {
   'instagram-1': productImage('personalised-soy-candle'),
   'instagram-2': productImage('hand-thrown-keepsake-cups'),
   'instagram-3': productImage('initial-pendant-necklace'),
-  'instagram-4': keepsakeBox[1],
   'instagram-5': productImage('artisan-chocolate-favour-box'),
   'instagram-6': 'occasion-celebrations',
   'instagram-7': productImage('canvas-event-tote'),
