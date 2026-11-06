@@ -27,10 +27,34 @@
   .link-underline { @apply relative inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-wide2 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:bg-current after:transition-transform after:duration-500 hover:after:scale-x-50; }
 
   .field { @apply block w-full border-0 border-b border-espresso/20 bg-transparent px-0 py-3 text-[15px] text-espresso placeholder:text-espresso-muted/70 focus:border-gold-deep focus:outline-none focus:ring-0; }
-  .field-box { @apply block w-full border border-espresso/15 bg-linen/60 px-4 py-3 text-[15px] text-espresso placeholder:text-espresso-muted/70 focus:border-gold-deep focus:outline-none; }
-  .label { @apply mb-1 block text-[11px] font-medium uppercase tracking-wide2 text-espresso-muted; }
+  .field-box { @apply block w-full border border-espresso/20 bg-linen/60 px-4 py-3 text-[14.5px] text-espresso placeholder:text-espresso-muted/70 focus:border-gold-deep focus:bg-linen/90 focus:outline-none transition-colors; }
+  .label { @apply mb-1.5 block text-[11px] font-medium uppercase tracking-wide2 text-espresso-muted; }
   .hairline { @apply h-px w-full bg-espresso/10; }
   .card { @apply border border-espresso/10 bg-linen/50; }
+}
+
+/* Eliminate browser autofill stark white/blue highlight so fields blend seamlessly into luxury parchment */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #EFE6D6 inset !important;
+  box-shadow: 0 0 0 1000px #EFE6D6 inset !important;
+  -webkit-text-fill-color: #2A1E16 !important;
+  caret-color: #2A1E16 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.field:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #E7DCC8 inset !important;
+  box-shadow: 0 0 0 1000px #E7DCC8 inset !important;
+}
+
+.field-box:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #EFE6D6 inset !important;
+  box-shadow: 0 0 0 1000px #EFE6D6 inset !important;
 }
 
 @layer utilities {

@@ -92,7 +92,7 @@ export default function Auth({ mode }) {
         <Link to="/" className="mb-10"><Logo /></Link>
 
         {/* Card */}
-        <div className="w-full max-w-[420px] bg-ivory border border-espresso/10 shadow-sm px-8 py-10 sm:px-10">
+        <div className="w-full max-w-[640px] bg-ivory border border-espresso/12 shadow-[0_4px_30px_rgba(42,30,22,0.06)] px-6 py-11 sm:px-14 sm:py-12">
 
           {/* Header */}
           <div className="text-center mb-8">
@@ -114,19 +114,19 @@ export default function Auth({ mode }) {
             <form onSubmit={submit} noValidate className="space-y-5">
               {mode === 'register' && (
                 <div className="grid grid-cols-2 gap-4">
-                  <Field label="First name" error={errors.firstName}><input autoComplete="given-name" className="field" value={v.firstName || ''} onChange={set('firstName')} /></Field>
-                  <Field label="Last name"><input autoComplete="family-name" className="field" value={v.lastName || ''} onChange={set('lastName')} /></Field>
+                  <Field label="First name" error={errors.firstName}><input autoComplete="given-name" className="field-box" value={v.firstName || ''} onChange={set('firstName')} /></Field>
+                  <Field label="Last name"><input autoComplete="family-name" className="field-box" value={v.lastName || ''} onChange={set('lastName')} /></Field>
                 </div>
               )}
-              {mode !== 'reset' && <Field label="Email" error={errors.email}><input type="email" autoComplete="email" className="field" value={v.email || ''} onChange={set('email')} /></Field>}
-              {mode === 'register' && <Field label="Phone (optional)"><input type="tel" autoComplete="tel" className="field" value={v.phone || ''} onChange={set('phone')} /></Field>}
+              {mode !== 'reset' && <Field label="Email" error={errors.email}><input type="email" autoComplete="email" className="field-box" value={v.email || ''} onChange={set('email')} /></Field>}
+              {mode === 'register' && <Field label="Phone (optional)"><input type="tel" autoComplete="tel" className="field-box" value={v.phone || ''} onChange={set('phone')} /></Field>}
               {['login', 'register', 'reset'].includes(mode) && (
                 <Field label={mode === 'reset' ? 'New password' : 'Password'} error={errors.password}>
-                  <input type="password" autoComplete={mode === 'login' ? 'current-password' : 'new-password'} className="field" value={v.password || ''} onChange={set('password')} />
+                  <input type="password" autoComplete={mode === 'login' ? 'current-password' : 'new-password'} className="field-box" value={v.password || ''} onChange={set('password')} />
                 </Field>
               )}
               {['register', 'reset'].includes(mode) && (
-                <Field label="Confirm password" error={errors.confirm}><input type="password" autoComplete="new-password" className="field" value={v.confirm || ''} onChange={set('confirm')} /></Field>
+                <Field label="Confirm password" error={errors.confirm}><input type="password" autoComplete="new-password" className="field-box" value={v.confirm || ''} onChange={set('confirm')} /></Field>
               )}
               {mode === 'login' && (
                 <div className="text-right -mt-1">
