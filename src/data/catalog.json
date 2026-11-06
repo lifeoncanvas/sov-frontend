@@ -1,0 +1,1863 @@
+{
+ "note": "Offline copy of the public catalogue, used by src/lib/offline.js when the API cannot be reached. Regenerate after changing products in the admin (see README, \"Offline catalogue\").",
+ "savedAt": "2026-11-06T14:07:23.301Z",
+ "categories": [
+  {
+   "id": 1,
+   "name": "Wedding Souvenirs",
+   "slug": "wedding-souvenirs",
+   "description": "Keepsakes for your guests, crafted to echo the day.",
+   "imageUrl": null,
+   "sortOrder": 1,
+   "featured": true
+  },
+  {
+   "id": 2,
+   "name": "Birthday Gifts",
+   "slug": "birthday-gifts",
+   "description": "Thoughtful pieces to mark another beautiful year.",
+   "imageUrl": null,
+   "sortOrder": 2,
+   "featured": true
+  },
+  {
+   "id": 3,
+   "name": "Corporate Gifts",
+   "slug": "corporate-gifts",
+   "description": "Refined gifting for clients, teams and partners.",
+   "imageUrl": null,
+   "sortOrder": 3,
+   "featured": true
+  },
+  {
+   "id": 4,
+   "name": "Personalised Gifts",
+   "slug": "personalised-gifts",
+   "description": "Names, dates and messages, finished by hand.",
+   "imageUrl": null,
+   "sortOrder": 4,
+   "featured": true
+  },
+  {
+   "id": 5,
+   "name": "Gift Boxes",
+   "slug": "gift-boxes",
+   "description": "Curated collections, presented beautifully.",
+   "imageUrl": null,
+   "sortOrder": 5,
+   "featured": true
+  }
+ ],
+ "priceRange": {
+  "min": 18,
+  "max": 120
+ },
+ "products": [
+  {
+   "id": 3,
+   "name": "Personalised Soy Candle",
+   "slug": "personalised-soy-candle",
+   "shortDescription": "Hand-poured candle with a custom label for your celebration.",
+   "price": 26,
+   "compareAtPrice": null,
+   "imageUrl": null,
+   "imageAlt": "Personalised Soy Candle",
+   "hoverImageUrl": null,
+   "personalisable": true,
+   "inStock": true,
+   "stock": 298,
+   "bestseller": true,
+   "newArrival": true,
+   "categorySlugs": [
+    "birthday-gifts",
+    "personalised-gifts",
+    "wedding-souvenirs"
+   ]
+  },
+  {
+   "id": 2,
+   "name": "Monogrammed Ring Dish",
+   "slug": "monogrammed-ring-dish",
+   "shortDescription": "Porcelain ring dish, hand-finished with your initials.",
+   "price": 34,
+   "compareAtPrice": null,
+   "imageUrl": null,
+   "imageAlt": "Monogrammed Ring Dish",
+   "hoverImageUrl": null,
+   "personalisable": true,
+   "inStock": true,
+   "stock": 119,
+   "bestseller": true,
+   "newArrival": false,
+   "categorySlugs": [
+    "personalised-gifts",
+    "wedding-souvenirs"
+   ]
+  },
+  {
+   "id": 7,
+   "name": "Leather Travel Pouch",
+   "slug": "leather-travel-pouch",
+   "shortDescription": "Full-grain leather pouch, embossed with initials or a logo.",
+   "price": 64,
+   "compareAtPrice": null,
+   "imageUrl": null,
+   "imageAlt": "Leather Travel Pouch",
+   "hoverImageUrl": null,
+   "personalisable": true,
+   "inStock": true,
+   "stock": 80,
+   "bestseller": true,
+   "newArrival": false,
+   "categorySlugs": [
+    "corporate-gifts",
+    "personalised-gifts"
+   ]
+  },
+  {
+   "id": 1,
+   "name": "The Signature Keepsake Box",
+   "slug": "the-signature-keepsake-box",
+   "shortDescription": "A curated keepsake box wrapped in hand-tied ribbon.",
+   "price": 68,
+   "compareAtPrice": null,
+   "imageUrl": null,
+   "imageAlt": "The Signature Keepsake Box",
+   "hoverImageUrl": null,
+   "personalisable": true,
+   "inStock": true,
+   "stock": 40,
+   "bestseller": true,
+   "newArrival": false,
+   "categorySlugs": [
+    "gift-boxes",
+    "personalised-gifts"
+   ]
+  },
+  {
+   "id": 5,
+   "name": "Initial Pendant Necklace",
+   "slug": "initial-pendant-necklace",
+   "shortDescription": "Fine chain with an engraved initial pendant.",
+   "price": 72,
+   "compareAtPrice": null,
+   "imageUrl": null,
+   "imageAlt": "Initial Pendant Necklace",
+   "hoverImageUrl": null,
+   "personalisable": true,
+   "inStock": true,
+   "stock": 35,
+   "bestseller": true,
+   "newArrival": false,
+   "categorySlugs": [
+    "birthday-gifts",
+    "personalised-gifts"
+   ]
+  },
+  {
+   "id": 4,
+   "name": "Hand-Thrown Keepsake Cups",
+   "slug": "hand-thrown-keepsake-cups",
+   "shortDescription": "A pair of stoneware cups, glazed in warm ivory.",
+   "price": 48,
+   "compareAtPrice": null,
+   "imageUrl": null,
+   "imageAlt": "Hand-Thrown Keepsake Cups",
+   "hoverImageUrl": null,
+   "personalisable": true,
+   "inStock": true,
+   "stock": 60,
+   "bestseller": false,
+   "newArrival": true,
+   "categorySlugs": [
+    "birthday-gifts",
+    "gift-boxes"
+   ]
+  },
+  {
+   "id": 11,
+   "name": "The Botanical Ritual Box",
+   "slug": "the-botanical-ritual-box",
+   "shortDescription": "A calming set of botanical skincare, beautifully boxed.",
+   "price": 82,
+   "compareAtPrice": null,
+   "imageUrl": null,
+   "imageAlt": "The Botanical Ritual Box",
+   "hoverImageUrl": null,
+   "personalisable": true,
+   "inStock": true,
+   "stock": 25,
+   "bestseller": false,
+   "newArrival": true,
+   "categorySlugs": [
+    "corporate-gifts",
+    "gift-boxes"
+   ]
+  },
+  {
+   "id": 10,
+   "name": "Artisan Chocolate Favour Box",
+   "slug": "artisan-chocolate-favour-box",
+   "shortDescription": "Six hand-finished chocolates in a keepsake box.",
+   "price": 22,
+   "compareAtPrice": null,
+   "imageUrl": null,
+   "imageAlt": "Artisan Chocolate Favour Box",
+   "hoverImageUrl": null,
+   "personalisable": true,
+   "inStock": false,
+   "stock": 0,
+   "bestseller": false,
+   "newArrival": false,
+   "categorySlugs": [
+    "birthday-gifts",
+    "gift-boxes",
+    "wedding-souvenirs"
+   ]
+  },
+  {
+   "id": 8,
+   "name": "Linen Notebook & Pen Set",
+   "slug": "linen-notebook-pen-set",
+   "shortDescription": "A cloth-bound notebook and weighted pen, presented together.",
+   "price": 39,
+   "compareAtPrice": null,
+   "imageUrl": null,
+   "imageAlt": "Linen Notebook & Pen Set",
+   "hoverImageUrl": null,
+   "personalisable": true,
+   "inStock": true,
+   "stock": 200,
+   "bestseller": true,
+   "newArrival": true,
+   "categorySlugs": [
+    "corporate-gifts",
+    "personalised-gifts"
+   ]
+  },
+  {
+   "id": 9,
+   "name": "Canvas Event Tote",
+   "slug": "canvas-event-tote",
+   "shortDescription": "Natural canvas tote printed with your event details.",
+   "price": 18,
+   "compareAtPrice": null,
+   "imageUrl": null,
+   "imageAlt": "Canvas Event Tote",
+   "hoverImageUrl": null,
+   "personalisable": true,
+   "inStock": true,
+   "stock": 500,
+   "bestseller": false,
+   "newArrival": true,
+   "categorySlugs": [
+    "corporate-gifts",
+    "wedding-souvenirs"
+   ]
+  },
+  {
+   "id": 6,
+   "name": "Engraved Celebration Bracelet",
+   "slug": "engraved-celebration-bracelet",
+   "shortDescription": "A slender bracelet engraved with a date that matters.",
+   "price": 58,
+   "compareAtPrice": null,
+   "imageUrl": null,
+   "imageAlt": "Engraved Celebration Bracelet",
+   "hoverImageUrl": null,
+   "personalisable": true,
+   "inStock": true,
+   "stock": 50,
+   "bestseller": false,
+   "newArrival": true,
+   "categorySlugs": [
+    "personalised-gifts",
+    "wedding-souvenirs"
+   ]
+  },
+  {
+   "id": 12,
+   "name": "Pressed Bloom Keepsake Frame",
+   "slug": "pressed-bloom-keepsake-frame",
+   "shortDescription": "Preserve wedding or celebration flowers in a float frame.",
+   "price": 120,
+   "compareAtPrice": null,
+   "imageUrl": null,
+   "imageAlt": "Pressed Bloom Keepsake Frame",
+   "hoverImageUrl": null,
+   "personalisable": true,
+   "inStock": true,
+   "stock": 15,
+   "bestseller": false,
+   "newArrival": true,
+   "categorySlugs": [
+    "personalised-gifts",
+    "wedding-souvenirs"
+   ]
+  }
+ ],
+ "details": {
+  "personalised-soy-candle": {
+   "id": 3,
+   "name": "Personalised Soy Candle",
+   "slug": "personalised-soy-candle",
+   "shortDescription": "Hand-poured candle with a custom label for your celebration.",
+   "description": "A clean-burning soy candle in an amber glass vessel. Your names, date and a short message are printed on a textured label.",
+   "specifications": [
+    {
+     "label": "Burn time",
+     "value": "approx. 40 hours"
+    },
+    {
+     "label": "Wax",
+     "value": "Natural soy"
+    },
+    {
+     "label": "Vessel",
+     "value": "Amber glass, 200 ml"
+    },
+    {
+     "label": "Minimum order",
+     "value": "1"
+    }
+   ],
+   "price": 26,
+   "compareAtPrice": null,
+   "stock": 298,
+   "inStock": true,
+   "active": true,
+   "featured": true,
+   "bestseller": true,
+   "newArrival": true,
+   "soldCount": 142,
+   "images": [
+    {
+     "url": null,
+     "altText": "Personalised Soy Candle"
+    },
+    {
+     "url": null,
+     "altText": "Personalised Soy Candle"
+    },
+    {
+     "url": null,
+     "altText": "Personalised Soy Candle"
+    },
+    {
+     "url": null,
+     "altText": "Personalised Soy Candle"
+    },
+    {
+     "url": null,
+     "altText": "Personalised Soy Candle"
+    },
+    {
+     "url": null,
+     "altText": "Personalised Soy Candle"
+    }
+   ],
+   "categories": [
+    {
+     "id": 4,
+     "name": "Personalised Gifts",
+     "slug": "personalised-gifts",
+     "description": "Names, dates and messages, finished by hand.",
+     "imageUrl": null,
+     "sortOrder": 4,
+     "featured": true
+    },
+    {
+     "id": 2,
+     "name": "Birthday Gifts",
+     "slug": "birthday-gifts",
+     "description": "Thoughtful pieces to mark another beautiful year.",
+     "imageUrl": null,
+     "sortOrder": 2,
+     "featured": true
+    },
+    {
+     "id": 1,
+     "name": "Wedding Souvenirs",
+     "slug": "wedding-souvenirs",
+     "description": "Keepsakes for your guests, crafted to echo the day.",
+     "imageUrl": null,
+     "sortOrder": 1,
+     "featured": true
+    }
+   ],
+   "personalisation": {
+    "enabled": true,
+    "allowName": true,
+    "allowInitials": false,
+    "allowDate": true,
+    "allowMessage": true,
+    "allowLogo": false,
+    "allowEventDetails": true,
+    "allowInstructions": true,
+    "messageMaxLength": 120,
+    "extraCost": 0
+   },
+   "averageRating": null,
+   "reviewCount": 0,
+   "createdAt": "2026-11-04T09:28:17.244885Z"
+  },
+  "monogrammed-ring-dish": {
+   "id": 2,
+   "name": "Monogrammed Ring Dish",
+   "slug": "monogrammed-ring-dish",
+   "shortDescription": "Porcelain ring dish, hand-finished with your initials.",
+   "description": "A small porcelain dish for rings and treasured pieces, finished with a monogram or wedding date in soft gold.",
+   "specifications": [
+    {
+     "label": "Diameter",
+     "value": "10 cm"
+    },
+    {
+     "label": "Material",
+     "value": "Porcelain, gold lustre"
+    },
+    {
+     "label": "Care",
+     "value": "Hand wash only"
+    },
+    {
+     "label": "Lead time",
+     "value": "7–10 working days"
+    }
+   ],
+   "price": 34,
+   "compareAtPrice": null,
+   "stock": 119,
+   "inStock": true,
+   "active": true,
+   "featured": true,
+   "bestseller": true,
+   "newArrival": false,
+   "soldCount": 89,
+   "images": [
+    {
+     "url": null,
+     "altText": "Monogrammed Ring Dish"
+    },
+    {
+     "url": null,
+     "altText": "Monogrammed Ring Dish"
+    },
+    {
+     "url": null,
+     "altText": "Monogrammed Ring Dish"
+    },
+    {
+     "url": null,
+     "altText": "Monogrammed Ring Dish"
+    }
+   ],
+   "categories": [
+    {
+     "id": 4,
+     "name": "Personalised Gifts",
+     "slug": "personalised-gifts",
+     "description": "Names, dates and messages, finished by hand.",
+     "imageUrl": null,
+     "sortOrder": 4,
+     "featured": true
+    },
+    {
+     "id": 1,
+     "name": "Wedding Souvenirs",
+     "slug": "wedding-souvenirs",
+     "description": "Keepsakes for your guests, crafted to echo the day.",
+     "imageUrl": null,
+     "sortOrder": 1,
+     "featured": true
+    }
+   ],
+   "personalisation": {
+    "enabled": true,
+    "allowName": false,
+    "allowInitials": true,
+    "allowDate": true,
+    "allowMessage": false,
+    "allowLogo": false,
+    "allowEventDetails": false,
+    "allowInstructions": true,
+    "messageMaxLength": 120,
+    "extraCost": 4
+   },
+   "averageRating": null,
+   "reviewCount": 0,
+   "createdAt": "2026-11-04T09:28:16.108911Z"
+  },
+  "leather-travel-pouch": {
+   "id": 7,
+   "name": "Leather Travel Pouch",
+   "slug": "leather-travel-pouch",
+   "shortDescription": "Full-grain leather pouch, embossed with initials or a logo.",
+   "description": "A structured leather pouch for travel essentials. Blind-embossed with initials or a company logo — ideal for client gifting.",
+   "specifications": [
+    {
+     "label": "Dimensions",
+     "value": "22 × 14 cm"
+    },
+    {
+     "label": "Material",
+     "value": "Full-grain leather"
+    },
+    {
+     "label": "Lining",
+     "value": "Cotton twill"
+    },
+    {
+     "label": "Corporate minimum",
+     "value": "20 units for logo embossing"
+    }
+   ],
+   "price": 64,
+   "compareAtPrice": null,
+   "stock": 80,
+   "inStock": true,
+   "active": true,
+   "featured": true,
+   "bestseller": true,
+   "newArrival": false,
+   "soldCount": 73,
+   "images": [
+    {
+     "url": null,
+     "altText": "Leather Travel Pouch"
+    },
+    {
+     "url": null,
+     "altText": "Leather Travel Pouch"
+    },
+    {
+     "url": null,
+     "altText": "Leather Travel Pouch"
+    },
+    {
+     "url": null,
+     "altText": "Leather Travel Pouch"
+    }
+   ],
+   "categories": [
+    {
+     "id": 4,
+     "name": "Personalised Gifts",
+     "slug": "personalised-gifts",
+     "description": "Names, dates and messages, finished by hand.",
+     "imageUrl": null,
+     "sortOrder": 4,
+     "featured": true
+    },
+    {
+     "id": 3,
+     "name": "Corporate Gifts",
+     "slug": "corporate-gifts",
+     "description": "Refined gifting for clients, teams and partners.",
+     "imageUrl": null,
+     "sortOrder": 3,
+     "featured": true
+    }
+   ],
+   "personalisation": {
+    "enabled": true,
+    "allowName": false,
+    "allowInitials": true,
+    "allowDate": false,
+    "allowMessage": false,
+    "allowLogo": true,
+    "allowEventDetails": true,
+    "allowInstructions": true,
+    "messageMaxLength": 120,
+    "extraCost": 0
+   },
+   "averageRating": null,
+   "reviewCount": 0,
+   "createdAt": "2026-11-04T09:28:25.040289Z"
+  },
+  "the-signature-keepsake-box": {
+   "id": 1,
+   "name": "The Signature Keepsake Box",
+   "slug": "the-signature-keepsake-box",
+   "shortDescription": "A curated keepsake box wrapped in hand-tied ribbon.",
+   "description": "Our signature presentation: a rigid keepsake box lined in ivory, holding a selection of small treasures and a handwritten card. Designed to be kept long after the gift is opened.",
+   "specifications": [
+    {
+     "label": "Dimensions",
+     "value": "24 × 18 × 9 cm"
+    },
+    {
+     "label": "Materials",
+     "value": "Rigid board, cotton ribbon"
+    },
+    {
+     "label": "Includes",
+     "value": "Handwritten card"
+    },
+    {
+     "label": "Lead time",
+     "value": "3–5 working days"
+    }
+   ],
+   "price": 68,
+   "compareAtPrice": null,
+   "stock": 40,
+   "inStock": true,
+   "active": true,
+   "featured": true,
+   "bestseller": true,
+   "newArrival": false,
+   "soldCount": 64,
+   "images": [
+    {
+     "url": null,
+     "altText": "The Signature Keepsake Box"
+    },
+    {
+     "url": null,
+     "altText": "The Signature Keepsake Box"
+    },
+    {
+     "url": null,
+     "altText": "The Signature Keepsake Box"
+    },
+    {
+     "url": null,
+     "altText": "The Signature Keepsake Box"
+    }
+   ],
+   "categories": [
+    {
+     "id": 4,
+     "name": "Personalised Gifts",
+     "slug": "personalised-gifts",
+     "description": "Names, dates and messages, finished by hand.",
+     "imageUrl": null,
+     "sortOrder": 4,
+     "featured": true
+    },
+    {
+     "id": 5,
+     "name": "Gift Boxes",
+     "slug": "gift-boxes",
+     "description": "Curated collections, presented beautifully.",
+     "imageUrl": null,
+     "sortOrder": 5,
+     "featured": true
+    }
+   ],
+   "personalisation": {
+    "enabled": true,
+    "allowName": true,
+    "allowInitials": false,
+    "allowDate": false,
+    "allowMessage": true,
+    "allowLogo": false,
+    "allowEventDetails": false,
+    "allowInstructions": true,
+    "messageMaxLength": 120,
+    "extraCost": 0
+   },
+   "averageRating": null,
+   "reviewCount": 0,
+   "createdAt": "2026-11-04T09:28:14.952704Z"
+  },
+  "initial-pendant-necklace": {
+   "id": 5,
+   "name": "Initial Pendant Necklace",
+   "slug": "initial-pendant-necklace",
+   "shortDescription": "Fine chain with an engraved initial pendant.",
+   "description": "A delicate pendant engraved with an initial of your choice, presented in a linen pouch inside our signature box.",
+   "specifications": [
+    {
+     "label": "Chain length",
+     "value": "45 cm"
+    },
+    {
+     "label": "Finish",
+     "value": "Gold-plated sterling silver"
+    },
+    {
+     "label": "Pendant",
+     "value": "12 mm"
+    },
+    {
+     "label": "Presentation",
+     "value": "Linen pouch, gift box"
+    }
+   ],
+   "price": 72,
+   "compareAtPrice": null,
+   "stock": 35,
+   "inStock": true,
+   "active": true,
+   "featured": true,
+   "bestseller": true,
+   "newArrival": false,
+   "soldCount": 57,
+   "images": [
+    {
+     "url": null,
+     "altText": "Initial Pendant Necklace"
+    },
+    {
+     "url": null,
+     "altText": "Initial Pendant Necklace"
+    },
+    {
+     "url": null,
+     "altText": "Initial Pendant Necklace"
+    },
+    {
+     "url": null,
+     "altText": "Initial Pendant Necklace"
+    }
+   ],
+   "categories": [
+    {
+     "id": 2,
+     "name": "Birthday Gifts",
+     "slug": "birthday-gifts",
+     "description": "Thoughtful pieces to mark another beautiful year.",
+     "imageUrl": null,
+     "sortOrder": 2,
+     "featured": true
+    },
+    {
+     "id": 4,
+     "name": "Personalised Gifts",
+     "slug": "personalised-gifts",
+     "description": "Names, dates and messages, finished by hand.",
+     "imageUrl": null,
+     "sortOrder": 4,
+     "featured": true
+    }
+   ],
+   "personalisation": {
+    "enabled": true,
+    "allowName": false,
+    "allowInitials": true,
+    "allowDate": false,
+    "allowMessage": false,
+    "allowLogo": false,
+    "allowEventDetails": false,
+    "allowInstructions": true,
+    "messageMaxLength": 120,
+    "extraCost": 0
+   },
+   "averageRating": null,
+   "reviewCount": 0,
+   "createdAt": "2026-11-04T09:28:20.971179Z"
+  },
+  "hand-thrown-keepsake-cups": {
+   "id": 4,
+   "name": "Hand-Thrown Keepsake Cups",
+   "slug": "hand-thrown-keepsake-cups",
+   "shortDescription": "A pair of stoneware cups, glazed in warm ivory.",
+   "description": "Thrown on the wheel by local ceramicists, each pair is subtly unique. Optional engraved initials on the base.",
+   "specifications": [
+    {
+     "label": "Set",
+     "value": "2 cups"
+    },
+    {
+     "label": "Capacity",
+     "value": "220 ml each"
+    },
+    {
+     "label": "Material",
+     "value": "Stoneware"
+    },
+    {
+     "label": "Care",
+     "value": "Dishwasher safe"
+    }
+   ],
+   "price": 48,
+   "compareAtPrice": null,
+   "stock": 60,
+   "inStock": true,
+   "active": true,
+   "featured": true,
+   "bestseller": false,
+   "newArrival": true,
+   "soldCount": 41,
+   "images": [
+    {
+     "url": null,
+     "altText": "Hand-Thrown Keepsake Cups"
+    },
+    {
+     "url": null,
+     "altText": "Hand-Thrown Keepsake Cups"
+    },
+    {
+     "url": null,
+     "altText": "Hand-Thrown Keepsake Cups"
+    },
+    {
+     "url": null,
+     "altText": "Hand-Thrown Keepsake Cups"
+    }
+   ],
+   "categories": [
+    {
+     "id": 2,
+     "name": "Birthday Gifts",
+     "slug": "birthday-gifts",
+     "description": "Thoughtful pieces to mark another beautiful year.",
+     "imageUrl": null,
+     "sortOrder": 2,
+     "featured": true
+    },
+    {
+     "id": 5,
+     "name": "Gift Boxes",
+     "slug": "gift-boxes",
+     "description": "Curated collections, presented beautifully.",
+     "imageUrl": null,
+     "sortOrder": 5,
+     "featured": true
+    }
+   ],
+   "personalisation": {
+    "enabled": true,
+    "allowName": false,
+    "allowInitials": true,
+    "allowDate": false,
+    "allowMessage": false,
+    "allowLogo": false,
+    "allowEventDetails": false,
+    "allowInstructions": true,
+    "messageMaxLength": 120,
+    "extraCost": 6
+   },
+   "averageRating": null,
+   "reviewCount": 0,
+   "createdAt": "2026-11-04T09:28:19.204825Z"
+  },
+  "the-botanical-ritual-box": {
+   "id": 11,
+   "name": "The Botanical Ritual Box",
+   "slug": "the-botanical-ritual-box",
+   "shortDescription": "A calming set of botanical skincare, beautifully boxed.",
+   "description": "Hand cream, body oil and a botanical balm, nestled in our ivory gift box with a message card.",
+   "specifications": [
+    {
+     "label": "Includes",
+     "value": "3 full-size products"
+    },
+    {
+     "label": "Scent",
+     "value": "Neroli & cedar"
+    },
+    {
+     "label": "Vegan",
+     "value": "Yes"
+    },
+    {
+     "label": "Gift message",
+     "value": "Included"
+    }
+   ],
+   "price": 82,
+   "compareAtPrice": null,
+   "stock": 25,
+   "inStock": true,
+   "active": true,
+   "featured": true,
+   "bestseller": false,
+   "newArrival": true,
+   "soldCount": 19,
+   "images": [
+    {
+     "url": null,
+     "altText": "The Botanical Ritual Box"
+    },
+    {
+     "url": null,
+     "altText": "The Botanical Ritual Box"
+    },
+    {
+     "url": null,
+     "altText": "The Botanical Ritual Box"
+    },
+    {
+     "url": null,
+     "altText": "The Botanical Ritual Box"
+    }
+   ],
+   "categories": [
+    {
+     "id": 5,
+     "name": "Gift Boxes",
+     "slug": "gift-boxes",
+     "description": "Curated collections, presented beautifully.",
+     "imageUrl": null,
+     "sortOrder": 5,
+     "featured": true
+    },
+    {
+     "id": 3,
+     "name": "Corporate Gifts",
+     "slug": "corporate-gifts",
+     "description": "Refined gifting for clients, teams and partners.",
+     "imageUrl": null,
+     "sortOrder": 3,
+     "featured": true
+    }
+   ],
+   "personalisation": {
+    "enabled": true,
+    "allowName": false,
+    "allowInitials": false,
+    "allowDate": false,
+    "allowMessage": true,
+    "allowLogo": false,
+    "allowEventDetails": false,
+    "allowInstructions": true,
+    "messageMaxLength": 120,
+    "extraCost": 0
+   },
+   "averageRating": null,
+   "reviewCount": 0,
+   "createdAt": "2026-11-04T09:28:33.358335Z"
+  },
+  "artisan-chocolate-favour-box": {
+   "id": 10,
+   "name": "Artisan Chocolate Favour Box",
+   "slug": "artisan-chocolate-favour-box",
+   "shortDescription": "Six hand-finished chocolates in a keepsake box.",
+   "description": "Six seasonal chocolates from a small chocolatier, packed in a slim box with a personalised belly band.",
+   "specifications": [
+    {
+     "label": "Pieces",
+     "value": "6"
+    },
+    {
+     "label": "Shelf life",
+     "value": "6 weeks"
+    },
+    {
+     "label": "Allergens",
+     "value": "Contains milk, may contain nuts"
+    },
+    {
+     "label": "Packaging",
+     "value": "Recyclable"
+    }
+   ],
+   "price": 22,
+   "compareAtPrice": null,
+   "stock": 0,
+   "inStock": false,
+   "active": true,
+   "featured": false,
+   "bestseller": false,
+   "newArrival": false,
+   "soldCount": 112,
+   "images": [
+    {
+     "url": null,
+     "altText": "Artisan Chocolate Favour Box"
+    },
+    {
+     "url": null,
+     "altText": "Artisan Chocolate Favour Box"
+    },
+    {
+     "url": null,
+     "altText": "Artisan Chocolate Favour Box"
+    }
+   ],
+   "categories": [
+    {
+     "id": 1,
+     "name": "Wedding Souvenirs",
+     "slug": "wedding-souvenirs",
+     "description": "Keepsakes for your guests, crafted to echo the day.",
+     "imageUrl": null,
+     "sortOrder": 1,
+     "featured": true
+    },
+    {
+     "id": 5,
+     "name": "Gift Boxes",
+     "slug": "gift-boxes",
+     "description": "Curated collections, presented beautifully.",
+     "imageUrl": null,
+     "sortOrder": 5,
+     "featured": true
+    },
+    {
+     "id": 2,
+     "name": "Birthday Gifts",
+     "slug": "birthday-gifts",
+     "description": "Thoughtful pieces to mark another beautiful year.",
+     "imageUrl": null,
+     "sortOrder": 2,
+     "featured": true
+    }
+   ],
+   "personalisation": {
+    "enabled": true,
+    "allowName": true,
+    "allowInitials": false,
+    "allowDate": true,
+    "allowMessage": true,
+    "allowLogo": false,
+    "allowEventDetails": false,
+    "allowInstructions": true,
+    "messageMaxLength": 120,
+    "extraCost": 0
+   },
+   "averageRating": null,
+   "reviewCount": 0,
+   "createdAt": "2026-11-04T09:28:31.507529Z"
+  },
+  "linen-notebook-pen-set": {
+   "id": 8,
+   "name": "Linen Notebook & Pen Set",
+   "slug": "linen-notebook-pen-set",
+   "shortDescription": "A cloth-bound notebook and weighted pen, presented together.",
+   "description": "Lay-flat notebook bound in natural linen with a matching pen. Foil-stamped with a name or company logo.",
+   "specifications": [
+    {
+     "label": "Notebook",
+     "value": "A5, 192 pages"
+    },
+    {
+     "label": "Paper",
+     "value": "100 gsm ivory"
+    },
+    {
+     "label": "Pen",
+     "value": "Weighted metal, black ink"
+    },
+    {
+     "label": "Foil",
+     "value": "Gold or blind"
+    }
+   ],
+   "price": 39,
+   "compareAtPrice": null,
+   "stock": 200,
+   "inStock": true,
+   "active": true,
+   "featured": false,
+   "bestseller": true,
+   "newArrival": true,
+   "soldCount": 96,
+   "images": [
+    {
+     "url": null,
+     "altText": "Linen Notebook & Pen Set"
+    },
+    {
+     "url": null,
+     "altText": "Linen Notebook & Pen Set"
+    },
+    {
+     "url": null,
+     "altText": "Linen Notebook & Pen Set"
+    },
+    {
+     "url": null,
+     "altText": "Linen Notebook & Pen Set"
+    }
+   ],
+   "categories": [
+    {
+     "id": 3,
+     "name": "Corporate Gifts",
+     "slug": "corporate-gifts",
+     "description": "Refined gifting for clients, teams and partners.",
+     "imageUrl": null,
+     "sortOrder": 3,
+     "featured": true
+    },
+    {
+     "id": 4,
+     "name": "Personalised Gifts",
+     "slug": "personalised-gifts",
+     "description": "Names, dates and messages, finished by hand.",
+     "imageUrl": null,
+     "sortOrder": 4,
+     "featured": true
+    }
+   ],
+   "personalisation": {
+    "enabled": true,
+    "allowName": true,
+    "allowInitials": true,
+    "allowDate": false,
+    "allowMessage": false,
+    "allowLogo": true,
+    "allowEventDetails": false,
+    "allowInstructions": true,
+    "messageMaxLength": 120,
+    "extraCost": 0
+   },
+   "averageRating": null,
+   "reviewCount": 0,
+   "createdAt": "2026-11-04T09:28:27.420631Z"
+  },
+  "canvas-event-tote": {
+   "id": 9,
+   "name": "Canvas Event Tote",
+   "slug": "canvas-event-tote",
+   "shortDescription": "Natural canvas tote printed with your event details.",
+   "description": "A sturdy cotton canvas tote — a practical favour for weddings, conferences and celebrations, printed with your event name and date.",
+   "specifications": [
+    {
+     "label": "Dimensions",
+     "value": "38 × 42 cm"
+    },
+    {
+     "label": "Material",
+     "value": "340 gsm cotton canvas"
+    },
+    {
+     "label": "Print",
+     "value": "One colour"
+    },
+    {
+     "label": "",
+     "value": "Bulk pricing available from 50 units"
+    }
+   ],
+   "price": 18,
+   "compareAtPrice": null,
+   "stock": 500,
+   "inStock": true,
+   "active": true,
+   "featured": false,
+   "bestseller": false,
+   "newArrival": true,
+   "soldCount": 33,
+   "images": [
+    {
+     "url": null,
+     "altText": "Canvas Event Tote"
+    },
+    {
+     "url": null,
+     "altText": "Canvas Event Tote"
+    }
+   ],
+   "categories": [
+    {
+     "id": 1,
+     "name": "Wedding Souvenirs",
+     "slug": "wedding-souvenirs",
+     "description": "Keepsakes for your guests, crafted to echo the day.",
+     "imageUrl": null,
+     "sortOrder": 1,
+     "featured": true
+    },
+    {
+     "id": 3,
+     "name": "Corporate Gifts",
+     "slug": "corporate-gifts",
+     "description": "Refined gifting for clients, teams and partners.",
+     "imageUrl": null,
+     "sortOrder": 3,
+     "featured": true
+    }
+   ],
+   "personalisation": {
+    "enabled": true,
+    "allowName": true,
+    "allowInitials": false,
+    "allowDate": true,
+    "allowMessage": false,
+    "allowLogo": true,
+    "allowEventDetails": true,
+    "allowInstructions": true,
+    "messageMaxLength": 120,
+    "extraCost": 0
+   },
+   "averageRating": null,
+   "reviewCount": 0,
+   "createdAt": "2026-11-04T09:28:29.752350Z"
+  },
+  "engraved-celebration-bracelet": {
+   "id": 6,
+   "name": "Engraved Celebration Bracelet",
+   "slug": "engraved-celebration-bracelet",
+   "shortDescription": "A slender bracelet engraved with a date that matters.",
+   "description": "Engraved on the inner band with a date, coordinates or a few words — a quiet reminder worn every day.",
+   "specifications": [
+    {
+     "label": "Width",
+     "value": "4 mm"
+    },
+    {
+     "label": "Finish",
+     "value": "Gold-plated brass"
+    },
+    {
+     "label": "Sizing",
+     "value": "Adjustable"
+    },
+    {
+     "label": "Engraving",
+     "value": "Up to 30 characters"
+    }
+   ],
+   "price": 58,
+   "compareAtPrice": null,
+   "stock": 50,
+   "inStock": true,
+   "active": true,
+   "featured": false,
+   "bestseller": false,
+   "newArrival": true,
+   "soldCount": 22,
+   "images": [
+    {
+     "url": null,
+     "altText": "Engraved Celebration Bracelet"
+    },
+    {
+     "url": null,
+     "altText": "Engraved Celebration Bracelet"
+    },
+    {
+     "url": null,
+     "altText": "Engraved Celebration Bracelet"
+    },
+    {
+     "url": null,
+     "altText": "Engraved Celebration Bracelet"
+    }
+   ],
+   "categories": [
+    {
+     "id": 4,
+     "name": "Personalised Gifts",
+     "slug": "personalised-gifts",
+     "description": "Names, dates and messages, finished by hand.",
+     "imageUrl": null,
+     "sortOrder": 4,
+     "featured": true
+    },
+    {
+     "id": 1,
+     "name": "Wedding Souvenirs",
+     "slug": "wedding-souvenirs",
+     "description": "Keepsakes for your guests, crafted to echo the day.",
+     "imageUrl": null,
+     "sortOrder": 1,
+     "featured": true
+    }
+   ],
+   "personalisation": {
+    "enabled": true,
+    "allowName": false,
+    "allowInitials": false,
+    "allowDate": true,
+    "allowMessage": true,
+    "allowLogo": false,
+    "allowEventDetails": false,
+    "allowInstructions": true,
+    "messageMaxLength": 120,
+    "extraCost": 0
+   },
+   "averageRating": null,
+   "reviewCount": 0,
+   "createdAt": "2026-11-04T09:28:22.673893Z"
+  },
+  "pressed-bloom-keepsake-frame": {
+   "id": 12,
+   "name": "Pressed Bloom Keepsake Frame",
+   "slug": "pressed-bloom-keepsake-frame",
+   "shortDescription": "Preserve wedding or celebration flowers in a float frame.",
+   "description": "Send us blooms from your day and we will press and mount them in an oak float frame, finished with your names and date.",
+   "specifications": [
+    {
+     "label": "Frame",
+     "value": "Solid oak, 30 × 40 cm"
+    },
+    {
+     "label": "Glazing",
+     "value": "Museum glass"
+    },
+    {
+     "label": "Turnaround",
+     "value": "6–8 weeks"
+    },
+    {
+     "label": "Shipping kit",
+     "value": "Provided"
+    }
+   ],
+   "price": 120,
+   "compareAtPrice": null,
+   "stock": 15,
+   "inStock": true,
+   "active": true,
+   "featured": false,
+   "bestseller": false,
+   "newArrival": true,
+   "soldCount": 8,
+   "images": [
+    {
+     "url": null,
+     "altText": "Pressed Bloom Keepsake Frame"
+    },
+    {
+     "url": null,
+     "altText": "Pressed Bloom Keepsake Frame"
+    }
+   ],
+   "categories": [
+    {
+     "id": 1,
+     "name": "Wedding Souvenirs",
+     "slug": "wedding-souvenirs",
+     "description": "Keepsakes for your guests, crafted to echo the day.",
+     "imageUrl": null,
+     "sortOrder": 1,
+     "featured": true
+    },
+    {
+     "id": 4,
+     "name": "Personalised Gifts",
+     "slug": "personalised-gifts",
+     "description": "Names, dates and messages, finished by hand.",
+     "imageUrl": null,
+     "sortOrder": 4,
+     "featured": true
+    }
+   ],
+   "personalisation": {
+    "enabled": true,
+    "allowName": true,
+    "allowInitials": false,
+    "allowDate": true,
+    "allowMessage": false,
+    "allowLogo": false,
+    "allowEventDetails": true,
+    "allowInstructions": true,
+    "messageMaxLength": 120,
+    "extraCost": 0
+   },
+   "averageRating": null,
+   "reviewCount": 0,
+   "createdAt": "2026-11-04T09:28:35.678589Z"
+  }
+ },
+ "related": {
+  "personalised-soy-candle": [
+   "artisan-chocolate-favour-box",
+   "linen-notebook-pen-set",
+   "monogrammed-ring-dish",
+   "leather-travel-pouch",
+   "the-signature-keepsake-box",
+   "initial-pendant-necklace",
+   "hand-thrown-keepsake-cups",
+   "canvas-event-tote",
+   "engraved-celebration-bracelet",
+   "pressed-bloom-keepsake-frame"
+  ],
+  "monogrammed-ring-dish": [
+   "personalised-soy-candle",
+   "artisan-chocolate-favour-box",
+   "linen-notebook-pen-set",
+   "leather-travel-pouch",
+   "the-signature-keepsake-box",
+   "initial-pendant-necklace",
+   "canvas-event-tote",
+   "engraved-celebration-bracelet",
+   "pressed-bloom-keepsake-frame"
+  ],
+  "leather-travel-pouch": [
+   "personalised-soy-candle",
+   "linen-notebook-pen-set",
+   "monogrammed-ring-dish",
+   "the-signature-keepsake-box",
+   "initial-pendant-necklace",
+   "canvas-event-tote",
+   "engraved-celebration-bracelet",
+   "the-botanical-ritual-box",
+   "pressed-bloom-keepsake-frame"
+  ],
+  "the-signature-keepsake-box": [
+   "personalised-soy-candle",
+   "artisan-chocolate-favour-box",
+   "linen-notebook-pen-set",
+   "monogrammed-ring-dish",
+   "leather-travel-pouch",
+   "initial-pendant-necklace",
+   "hand-thrown-keepsake-cups",
+   "engraved-celebration-bracelet",
+   "the-botanical-ritual-box",
+   "pressed-bloom-keepsake-frame"
+  ],
+  "initial-pendant-necklace": [
+   "personalised-soy-candle",
+   "artisan-chocolate-favour-box",
+   "linen-notebook-pen-set",
+   "monogrammed-ring-dish",
+   "leather-travel-pouch",
+   "the-signature-keepsake-box",
+   "hand-thrown-keepsake-cups",
+   "engraved-celebration-bracelet",
+   "pressed-bloom-keepsake-frame"
+  ],
+  "hand-thrown-keepsake-cups": [
+   "personalised-soy-candle",
+   "artisan-chocolate-favour-box",
+   "the-signature-keepsake-box",
+   "initial-pendant-necklace",
+   "the-botanical-ritual-box"
+  ],
+  "the-botanical-ritual-box": [
+   "artisan-chocolate-favour-box",
+   "linen-notebook-pen-set",
+   "leather-travel-pouch",
+   "the-signature-keepsake-box",
+   "hand-thrown-keepsake-cups",
+   "canvas-event-tote"
+  ],
+  "artisan-chocolate-favour-box": [
+   "personalised-soy-candle",
+   "monogrammed-ring-dish",
+   "the-signature-keepsake-box",
+   "initial-pendant-necklace",
+   "hand-thrown-keepsake-cups",
+   "canvas-event-tote",
+   "engraved-celebration-bracelet",
+   "the-botanical-ritual-box",
+   "pressed-bloom-keepsake-frame"
+  ],
+  "linen-notebook-pen-set": [
+   "personalised-soy-candle",
+   "monogrammed-ring-dish",
+   "leather-travel-pouch",
+   "the-signature-keepsake-box",
+   "initial-pendant-necklace",
+   "canvas-event-tote",
+   "engraved-celebration-bracelet",
+   "the-botanical-ritual-box",
+   "pressed-bloom-keepsake-frame"
+  ],
+  "canvas-event-tote": [
+   "personalised-soy-candle",
+   "artisan-chocolate-favour-box",
+   "linen-notebook-pen-set",
+   "monogrammed-ring-dish",
+   "leather-travel-pouch",
+   "engraved-celebration-bracelet",
+   "the-botanical-ritual-box",
+   "pressed-bloom-keepsake-frame"
+  ],
+  "engraved-celebration-bracelet": [
+   "personalised-soy-candle",
+   "artisan-chocolate-favour-box",
+   "linen-notebook-pen-set",
+   "monogrammed-ring-dish",
+   "leather-travel-pouch",
+   "the-signature-keepsake-box",
+   "initial-pendant-necklace",
+   "canvas-event-tote",
+   "pressed-bloom-keepsake-frame"
+  ],
+  "pressed-bloom-keepsake-frame": [
+   "personalised-soy-candle",
+   "artisan-chocolate-favour-box",
+   "linen-notebook-pen-set",
+   "monogrammed-ring-dish",
+   "leather-travel-pouch",
+   "the-signature-keepsake-box",
+   "initial-pendant-necklace",
+   "canvas-event-tote",
+   "engraved-celebration-bracelet"
+  ]
+ },
+ "reviews": {
+  "personalised-soy-candle": [],
+  "monogrammed-ring-dish": [],
+  "leather-travel-pouch": [],
+  "the-signature-keepsake-box": [],
+  "initial-pendant-necklace": [],
+  "hand-thrown-keepsake-cups": [],
+  "the-botanical-ritual-box": [],
+  "artisan-chocolate-favour-box": [],
+  "linen-notebook-pen-set": [],
+  "canvas-event-tote": [],
+  "engraved-celebration-bracelet": [],
+  "pressed-bloom-keepsake-frame": []
+ },
+ "sortOrder": {
+  "featured": [
+   "personalised-soy-candle",
+   "monogrammed-ring-dish",
+   "leather-travel-pouch",
+   "the-signature-keepsake-box",
+   "initial-pendant-necklace",
+   "hand-thrown-keepsake-cups",
+   "the-botanical-ritual-box",
+   "artisan-chocolate-favour-box",
+   "linen-notebook-pen-set",
+   "canvas-event-tote",
+   "engraved-celebration-bracelet",
+   "pressed-bloom-keepsake-frame"
+  ],
+  "popular": [
+   "personalised-soy-candle",
+   "artisan-chocolate-favour-box",
+   "linen-notebook-pen-set",
+   "monogrammed-ring-dish",
+   "leather-travel-pouch",
+   "the-signature-keepsake-box",
+   "initial-pendant-necklace",
+   "hand-thrown-keepsake-cups",
+   "canvas-event-tote",
+   "engraved-celebration-bracelet",
+   "the-botanical-ritual-box",
+   "pressed-bloom-keepsake-frame"
+  ],
+  "newest": [
+   "pressed-bloom-keepsake-frame",
+   "the-botanical-ritual-box",
+   "artisan-chocolate-favour-box",
+   "canvas-event-tote",
+   "linen-notebook-pen-set",
+   "leather-travel-pouch",
+   "engraved-celebration-bracelet",
+   "initial-pendant-necklace",
+   "hand-thrown-keepsake-cups",
+   "personalised-soy-candle",
+   "monogrammed-ring-dish",
+   "the-signature-keepsake-box"
+  ],
+  "price-asc": [
+   "canvas-event-tote",
+   "artisan-chocolate-favour-box",
+   "personalised-soy-candle",
+   "monogrammed-ring-dish",
+   "linen-notebook-pen-set",
+   "hand-thrown-keepsake-cups",
+   "engraved-celebration-bracelet",
+   "leather-travel-pouch",
+   "the-signature-keepsake-box",
+   "initial-pendant-necklace",
+   "the-botanical-ritual-box",
+   "pressed-bloom-keepsake-frame"
+  ],
+  "price-desc": [
+   "pressed-bloom-keepsake-frame",
+   "the-botanical-ritual-box",
+   "initial-pendant-necklace",
+   "the-signature-keepsake-box",
+   "leather-travel-pouch",
+   "engraved-celebration-bracelet",
+   "hand-thrown-keepsake-cups",
+   "linen-notebook-pen-set",
+   "monogrammed-ring-dish",
+   "personalised-soy-candle",
+   "artisan-chocolate-favour-box",
+   "canvas-event-tote"
+  ],
+  "name": [
+   "artisan-chocolate-favour-box",
+   "canvas-event-tote",
+   "engraved-celebration-bracelet",
+   "hand-thrown-keepsake-cups",
+   "initial-pendant-necklace",
+   "leather-travel-pouch",
+   "linen-notebook-pen-set",
+   "monogrammed-ring-dish",
+   "personalised-soy-candle",
+   "pressed-bloom-keepsake-frame",
+   "the-botanical-ritual-box",
+   "the-signature-keepsake-box"
+  ]
+ },
+ "content": {
+  "store": {
+   "locale": "en-GB",
+   "currency": "GBP",
+   "note": "Placeholder currency — change under Admin → Content → store."
+  },
+  "hero": {
+   "eyebrow": "Luxury souvenirs & personalised gifting",
+   "headline": "Memorable Moments. Beautifully Preserved.",
+   "subheadline": "From elegant event souvenirs to personalised gifts, LICHT SIGNATURE SOUVENIRS helps you celebrate life's special moments with gifts worth remembering.",
+   "image": null,
+   "imageAlt": "A dark gift box tied with natural twine",
+   "primaryCta": "Shop Now",
+   "secondaryCta": "Explore Our Collection"
+  },
+  "about": {
+   "heading": "More Than a Gift. It's a Memory.",
+   "body": "LICHT Signature Souvenirs was founded on a simple belief: the most meaningful gifts are the ones that hold a moment. We curate, personalise and present every piece with the care of a keepsake — so an ordinary gift becomes something that is kept, remembered and treasured.",
+   "body2": "Placeholder: add your founding story, studio and craft details here from the admin dashboard.",
+   "image": null,
+   "image2": null,
+   "image3": null
+  },
+  "occasions": {
+   "items": [
+    {
+     "title": "Weddings",
+     "slug": "weddings",
+     "image": null,
+     "category": "wedding-souvenirs"
+    },
+    {
+     "title": "Birthdays",
+     "slug": "birthdays",
+     "image": null,
+     "category": "birthday-gifts"
+    },
+    {
+     "title": "Anniversaries",
+     "slug": "anniversaries",
+     "image": null,
+     "category": "personalised-gifts"
+    },
+    {
+     "title": "Baby Showers",
+     "slug": "baby-showers",
+     "image": null,
+     "category": "personalised-gifts"
+    },
+    {
+     "title": "Christenings & Religious Celebrations",
+     "slug": "christenings",
+     "image": null,
+     "category": "personalised-gifts"
+    },
+    {
+     "title": "Graduations",
+     "slug": "graduations",
+     "image": null,
+     "category": "personalised-gifts"
+    },
+    {
+     "title": "Corporate Events",
+     "slug": "corporate-events",
+     "image": null,
+     "category": "corporate-gifts"
+    },
+    {
+     "title": "Special Celebrations",
+     "slug": "celebrations",
+     "image": null,
+     "category": "gift-boxes"
+    }
+   ]
+  },
+  "giftBoxes": {
+   "items": [
+    {
+     "title": "The Signature Box",
+     "description": "Our house collection of small treasures.",
+     "image": null,
+     "link": "/shop/gift-boxes"
+    },
+    {
+     "title": "The Celebration Box",
+     "description": "Joyful pieces for birthdays and milestones.",
+     "image": null,
+     "link": "/shop/gift-boxes"
+    },
+    {
+     "title": "The Wedding Box",
+     "description": "For the couple, the party and the guests.",
+     "image": null,
+     "link": "/shop/gift-boxes"
+    },
+    {
+     "title": "The Corporate Box",
+     "description": "Polished gifting for clients and teams.",
+     "image": null,
+     "link": "/shop/gift-boxes"
+    },
+    {
+     "title": "The Luxury Box",
+     "description": "Our most indulgent, fully personalised.",
+     "image": null,
+     "link": "/shop/gift-boxes"
+    }
+   ]
+  },
+  "instagram": {
+   "handle": "@lichtsignature",
+   "url": "https://instagram.com/",
+   "note": "Placeholder handle and link — update in Admin → Content.",
+   "images": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "contact": {
+   "email": "hello@licht-signature.example",
+   "phone": "+00 0000 000000",
+   "whatsapp": "+00 0000 000000",
+   "instagram": "@lichtsignature",
+   "location": "Studio address to be confirmed",
+   "hours": "Mon–Fri, 9:00–17:30",
+   "note": "Placeholder contact details — replace in Admin → Content → contact."
+  },
+  "corporate": {
+   "heading": "Corporate Gifting, With a Signature Touch.",
+   "body": "From welcome kits to client appreciation and milestone celebrations, we design branded gifts that feel personal — with logo personalisation, multi-address delivery and a dedicated studio contact.",
+   "image": null,
+   "points": [
+    "Logo embossing & foil stamping",
+    "Curated gift boxes in your brand palette",
+    "Delivery to one office or many recipients",
+    "Invoicing and dedicated account support"
+   ]
+  },
+  "personalised": {
+   "heading": "Make It Personal.",
+   "body": "Every piece can carry the details that make it yours — finished by hand in our studio.",
+   "image": null,
+   "options": [
+    "Names",
+    "Dates",
+    "Initials",
+    "Messages",
+    "Logos",
+    "Event details",
+    "Custom designs"
+   ]
+  },
+  "bulk": {
+   "heading": "Planning an Event? Let Us Help.",
+   "body": "Weddings, conferences, launches and celebrations — we produce beautifully consistent souvenirs at scale, with tiered pricing and a single point of contact.",
+   "tiers": [
+    "20",
+    "50",
+    "100",
+    "500+"
+   ],
+   "image": null
+  }
+ },
+ "testimonials": [
+  {
+   "id": 1,
+   "authorName": "Placeholder — Customer name",
+   "occasion": "Wedding favours",
+   "quote": "Replace this with a real customer review from the admin dashboard. Edit or deactivate placeholder testimonials before launch.",
+   "rating": 5,
+   "active": true,
+   "placeholder": true,
+   "sortOrder": 0
+  },
+  {
+   "id": 2,
+   "authorName": "Placeholder — Customer name",
+   "occasion": "Corporate gifting",
+   "quote": "This is sample text showing how a client quote will appear in the carousel. Add genuine reviews under Admin → Testimonials.",
+   "rating": 5,
+   "active": true,
+   "placeholder": true,
+   "sortOrder": 1
+  },
+  {
+   "id": 3,
+   "authorName": "Placeholder — Customer name",
+   "occasion": "Birthday gift",
+   "quote": "Sample testimonial. Real reviews, ratings and names should only be added with the customer's permission.",
+   "rating": 5,
+   "active": true,
+   "placeholder": true,
+   "sortOrder": 2
+  }
+ ],
+ "faqs": [
+  {
+   "id": 1,
+   "category": "Personalisation",
+   "question": "What can be personalised?",
+   "answer": "Most pieces can carry names, initials, dates or a short message. Selected products also accept logos and event details. Only the options a product supports are shown on its page.",
+   "sortOrder": 0,
+   "active": true
+  },
+  {
+   "id": 2,
+   "category": "Personalisation",
+   "question": "Will I see a proof before production?",
+   "answer": "For logo and custom-design orders we email a digital proof for approval before anything is made.",
+   "sortOrder": 1,
+   "active": true
+  },
+  {
+   "id": 3,
+   "category": "Bulk orders",
+   "question": "Do you offer bulk or event pricing?",
+   "answer": "Yes. For orders of 20 or more pieces, request a quote and we will prepare tiered pricing for your quantity.",
+   "sortOrder": 2,
+   "active": true
+  },
+  {
+   "id": 4,
+   "category": "Custom orders",
+   "question": "Can you create something completely bespoke?",
+   "answer": "We love bespoke commissions. Share your idea through the custom gift enquiry form and our studio will advise on materials, timing and cost.",
+   "sortOrder": 3,
+   "active": true
+  },
+  {
+   "id": 5,
+   "category": "Ordering timelines",
+   "question": "How far in advance should I order?",
+   "answer": "Allow 3–10 working days for personalised items and 3–6 weeks for large event orders. Lead times are listed on each product.",
+   "sortOrder": 4,
+   "active": true
+  },
+  {
+   "id": 6,
+   "category": "Delivery",
+   "question": "How is my order delivered?",
+   "answer": "Orders are packed in protective outer cartons and sent with tracked delivery. Standard, express and studio collection options are offered at checkout.",
+   "sortOrder": 5,
+   "active": true
+  },
+  {
+   "id": 7,
+   "category": "Corporate gifting",
+   "question": "Can you deliver to multiple recipients?",
+   "answer": "Yes — corporate orders can be shipped to a single office or to individual recipients from a spreadsheet you provide.",
+   "sortOrder": 6,
+   "active": true
+  },
+  {
+   "id": 8,
+   "category": "Quote requests",
+   "question": "How quickly will I receive a quote?",
+   "answer": "We reply to every enquiry within two working days.",
+   "sortOrder": 7,
+   "active": true
+  },
+  {
+   "id": 9,
+   "category": "Payments",
+   "question": "Which payment methods do you accept?",
+   "answer": "Payment options are shown at checkout. Card details are handled by our payment provider and never stored by us.",
+   "sortOrder": 8,
+   "active": true
+  },
+  {
+   "id": 10,
+   "category": "Returns and refunds",
+   "question": "Can I return a personalised item?",
+   "answer": "Personalised items are made for you and cannot be returned unless they arrive damaged or faulty. Non-personalised items may be returned within 14 days in original condition.",
+   "sortOrder": 9,
+   "active": true
+  }
+ ]
+}

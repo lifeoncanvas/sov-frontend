@@ -57,6 +57,27 @@ also added to the Content-Security-Policy.
 | `VITE_GA_ID` | Google Analytics 4 |
 | `VITE_TURNSTILE_SITE_KEY` | Cloudflare Turnstile; the backend needs `TURNSTILE_SECRET_KEY` |
 
+## Offline catalogue
+
+The storefront carries its own copy of the public catalogue in `src/data/catalog.json`: products, categories,
+prices, descriptions, related products, site content, testimonials and FAQs. With all pictures in `src/assets`,
+**every page a visitor browses works even when the backend is down, slow, or answering with another app's data.**
+
+- When the API answers properly, its live data is used. The copy is only a fallback (`src/lib/offline.js`, used by
+  `src/lib/api.js`).
+- Anything that needs the server still needs the backend: bag, checkout, sign-in, account, enquiries, newsletter.
+  While it's down, those show "Our shop server isn't reachable right now…" instead of failing silently.
+
+**After changing products or content in the admin**, refresh the copy so the fallback matches. With the backend
+running on `localhost:8090` and pointed at the real database:
+
+```bash
+npm run snapshot
+```
+
+Then commit `src/data/catalog.json`. A new product also needs its picture in `src/assets/products/<slug>.jpg`
+(see Images).
+
 ## Images
 
 All pictures are bundled from this repository; image URLs stored in the backend database are not used.
