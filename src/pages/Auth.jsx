@@ -3,7 +3,6 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import { api } from '../lib/api';
 import { Field, Notice, Ornament, Seo, Spinner } from '../components/ui';
-import { Logo } from '../components/Header';
 import Captcha from '../components/Captcha';
 
 /** Only same-site paths: "/account" yes; "//evil.com" and "/\evil.com" (protocol-relative) no. */
@@ -88,10 +87,7 @@ export default function Auth({ mode }) {
       <Seo title={title} noindex />
       <div className="min-h-screen bg-linen/60 flex flex-col items-center justify-center px-4 py-16">
 
-        {/* Logo */}
-        <Link to="/" className="mb-10"><Logo /></Link>
-
-        {/* Card */}
+        {/* Card (the header above already shows the logo) */}
         <div className="w-full max-w-[640px] bg-ivory border border-espresso/12 shadow-[0_4px_30px_rgba(42,30,22,0.06)] px-6 py-11 sm:px-14 sm:py-12">
 
           {/* Header */}
