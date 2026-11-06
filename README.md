@@ -23,22 +23,32 @@ show `ECONNREFUSED`), and no products appear. Start the backend and refresh.
 
 ## Deploy on the server (GoDaddy VPS)
 
-The live storefront is `https://lichtsignaturesouvenirs.store`. It calls the API at
-`https://api.lichtsignaturesouvenirs.store`, set in `.env.production`.
+Everything runs on **one domain**, `https://lichtsignaturesouvenirs.store`:
 
-1. Point DNS **A records** for `lichtsignaturesouvenirs.store` and `www` at the server.
-2. Build: `npm install && npm run build`. This produces `dist/`, which already contains the live API address.
+- the storefront is the built `dist/` folder;
+- `/api`, `/uploads` and `/sitemap.xml` are forwarded by nginx to the LICHT backend (the `souv-b` repo), running as a
+  service on the same server, port 8090.
+
+The built site calls `/api` on its own domain (`VITE_API_URL` is empty in `.env.production`), so no extra DNS record,
+certificate or CORS setting is needed.
+
+1. Start the backend on the server first (backend README, "Deploy on a Linux server").
+   `curl http://localhost:8090/api/categories` on the server must list **Wedding Souvenirs, Birthday Gifts…**.
+2. Build: `npm install && npm run build`. This produces `dist/`.
 3. Install nginx and certbot (Ubuntu: `sudo apt install nginx certbot python3-certbot-nginx`), then follow the steps
-   at the top of `deploy/nginx-storefront.conf`. It serves `dist/`, sends paths like `/shop` to `index.html` so
-   page refreshes work, and adds the security headers. Always run `sudo nginx -t` before reloading.
-4. Check: open the site, and the shop shows products. If it shows no products, check the API first:
-   `https://api.lichtsignaturesouvenirs.store/api/categories` must return JSON. Its `CORS_ALLOWED_ORIGINS` must
-   include the storefront address.
+   at the top of `deploy/nginx-storefront.conf`. It serves `dist/`, forwards `/api` and `/uploads` to the backend,
+   makes refreshes on pages like `/shop` work, and adds the security headers. Always run `sudo nginx -t` before
+   reloading.
+4. Check: `https://lichtsignaturesouvenirs.store/api/categories` shows the souvenir categories, and the shop shows
+   products.
+   - If that address shows something else (for example "Healing Streams" testimonies), another nginx site or rule is
+     still sending `/api` to a different app. Remove it as described at the top of `deploy/nginx-storefront.conf`.
+   - If it returns `502 Bad Gateway`, the backend isn't running, or isn't on the port that nginx uses.
 
-**To update:** pull, `npm run build`, copy `dist/*` to `/var/www/licht/`. No restart is needed.
+**To update the storefront:** pull, `npm run build`, copy `dist/*` to `/var/www/licht/`. No restart is needed.
 
-To build for a different API address, change `VITE_API_URL` in `.env.production`, or set it when building:
-`VITE_API_URL=https://other-api.example npm run build`. It is also added to the Content-Security-Policy.
+If the API ever moves to its own domain, put that address in `VITE_API_URL` in `.env.production` and rebuild. It is
+also added to the Content-Security-Policy.
 
 | Variable | Purpose |
 | --- | --- |
